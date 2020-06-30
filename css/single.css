@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+.single-contents{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.single-contents::-webkit-scrollbar{
+  display: none;
+}
+.single-topimg{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.single-topimg img{
+  width: 90%;
+}
+.single-text{
+  width: 100%;
+  font-size: 1.5em;
+  color: white;
+}
+@media screen and (max-width:1024px) { /*タブレット以下*/
+  .single-topimg{
+    justify-content: flex-start;
+    overflow-x: hidden;
+    height: 50%
+  }
+  .single-topimg img{
+    height: 100%;
+    width: auto;
+  }
+}
+@media screen and (max-width:720px) { /*スマホ以下*/
+  .single-text{
+    font-size: 1em;
+  }
+}
